@@ -16,22 +16,15 @@ using matrix = vector<vector<long unsigned int>>;
 
 int main(int argc, char** argv){
 
-    /* Allocate serie environment variables */
-    int problemSize;
+    int problemSize = atoi(argv[1]);
     double executeTime;
     struct timeval timeStart, timeEnd;
-    
-    /* Set serie environment variables */
-    problemSize = atoi(argv[1]);
-
-    matrix A(problemSize, std::vector<long unsigned int>(problemSize));
-    matrix B(problemSize, std::vector<long unsigned int>(problemSize));
-    matrix C(problemSize, std::vector<long unsigned int>(problemSize));
+    matrix A, B, C;
 
     gettimeofday(&timeStart, 0);
 
-    A = get2DArray(problemSize);
-    B = get2DArray(problemSize);
+    A = getRandom2DArray(problemSize);
+    B = getRandom2DArray(problemSize);
     C = matrixProduct(A,B);
 
     //print2DArray(A);

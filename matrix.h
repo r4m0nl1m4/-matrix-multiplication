@@ -15,9 +15,17 @@ using line = vector<long unsigned int>;
 using matrix = vector<line>;
 
 /*
- * Generating Similar Elements Square Matrix
+ * Creates Similar Elements Square Matrix
  */
-matrix get2DArray(long unsigned int n){
+matrix creates2DArray(long unsigned int n){
+    matrix A(n, line(n));
+    return A;
+}
+
+/*
+ * Generates Random Similar Elements Square Matrix
+ */
+matrix getRandom2DArray(long unsigned int n){
 	matrix A(n,line(n));
 	long unsigned int number = rand() % 100;
 	for (long unsigned int i=0; i<n; i++ ){
@@ -91,17 +99,13 @@ void printVector(line vetor){
  * Product of two Similar Elements Square Matrix using rand line number set
  */
 matrix matrixProductRandLine(matrix A, matrix B){
-	long unsigned int n = A.size();
-    matrix C(n,line(n));
-    // Get rand  line 
-	vector<long unsigned int> line(A.size());
-	line = getRandVector(n);
-	printVector(line);
-	//Product
+    matrix C = creates2DArray(A.size());
+    line vec = getRandVector(A.size());
+    int l;
+	printVector(vec);
     for (long unsigned int i=0; i<A.size(); i++ ){
-    	int l = line[i]-1;
-        for (long unsigned int j=0; j<B.size(); j++ ){
-        	
+    	l = vec[i]-1;
+        for (long unsigned int j=0; j<B.size(); j++ ){        	
             for (long unsigned int k=0; k<A.size(); k++ ){
                 C[l][j] += A[l][k] * B[k][j];
             }

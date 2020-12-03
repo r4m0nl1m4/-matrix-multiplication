@@ -20,10 +20,7 @@ MPI_Status status;
 
 int main(int argc, char **argv)
 {
-    int N, numtasks,taskid,numworkers,source,dest,rows,offset,i,j,l,k;
-
-    // Getting the Problem Size (number of rows and columns in matrix)
-    N = atoi(argv[1]);
+    int N = atoi(argv[1]), numtasks,taskid,numworkers,source,dest,rows,offset,i,j,l,k;
 
     double timeStart, timeEnd, executeTime;
     double a[N][N],b[N][N],c[N][N];
