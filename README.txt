@@ -7,7 +7,7 @@
 //                                                                         //
 /////////////////////////////////////////////////////////////////////////////
 //                                                                         //
-// Names: matrix                                                           //
+// Names: matrix.h                                                         //
 //        report.h                                                         //
 //        report.pdf                                                       //
 //        matrix-multiplication-serial.cpp                                 //
@@ -21,15 +21,17 @@
 //                                                                         //
 // Author: P.R.O.Lima                                                      //
 //                                                                         //
-// Repository: https://github.com/r4m0nl1m4/matrix-multiplication          //
+// Repository: https://github.com/r4m0nl1m4/calculates-matrix-multiplicati //
+// on                                                                      //
 //                                                                         //
 // Software: GNU Compiler Collection (gcc) 9.3.0                           //
 //                                                                         //
 /////////////////////////////////////////////////////////////////////////////
 //                                                                         //
-// Description: Calculates  the  multiplication of two square matrices. In //
-// each  matrix  all  numbers must be the same and in the same location as //
-// the matrix.                                                             //
+// Description: Calculates  the  multiplication  of  two  square matrices, //
+// developed   for  use  on  serie  and  parallel  processors  with  local //
+// interconnections. In each  matrix  all  numbers must be the same and in //
+// the same location as the matrix.                                        //
 //                                                                         //
 /////////////////////////////////////////////////////////////////////////////
 //                                                                         //
