@@ -15,6 +15,7 @@
 #include "./report.h"
 
 using namespace std;
+using line = vector<long unsigned int>;
 
 MPI_Status status;
 
@@ -112,16 +113,12 @@ int main(int argc, char **argv)
         MPI_Recv(&a, rows*N, MPI_DOUBLE, source, 1, MPI_COMM_WORLD, &status);
         MPI_Recv(&b, N*N, MPI_DOUBLE, source, 1, MPI_COMM_WORLD, &status);
 
-        /* Get rand  line */
-        vector<long unsigned int> line(N);
-        line = getRandVector(N);
-        //printVector(line);
-
         // Matrix Product
+        line vec = getRandVector(N);
+        //printVector(vec);
         for (i=0; i<N; i++ ){
-            l = line[i]-1;
-            for (j=0; j<rows; j++ ){
-                
+            l = vec[i]-1;
+            for (j=0; j<rows; j++ ){                
                 for (k=0; k<N; k++ ){
                     c[l][j] += a[l][k] * b[k][j];
                 }
