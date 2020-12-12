@@ -1,18 +1,9 @@
 
-//Main for "matrix-multiplication-serial" C application
+//Main for "matrix-multiplication-serial" C++ application
 //Created by r4m0nl1m4 16/11/2020
 
-//library(ies)
-#include <iostream>
-#include <stdlib.h>
-#include <vector>
-
-//new library(ies)
 #include "./matrix.h"
 #include "./report.h"
-
-using namespace std;
-using matrix = vector<vector<long unsigned int>>;
 
 int main(int argc, char** argv){
 
@@ -23,19 +14,19 @@ int main(int argc, char** argv){
 
     gettimeofday(&timeStart, 0);
 
-    A = getRandom2DArray(problemSize);
-    B = getRandom2DArray(problemSize);
+    A = getRandomSquare2DArray(problemSize);
+    B = getRandomSquare2DArray(problemSize);
     C = matrixProductRandLine(A,B);
-
-    print2DArray(A);
-    print2DArray(B);
-    print2DArray(C); 
 
     gettimeofday(&timeEnd, 0);
 
     executeTime = getExecuteTime(timeStart, timeEnd);  
 
     saveResultReportOnFile("result_report-serieRand-runtime.txt", executeTime);
+
+    //print2DArray(A);
+    //print2DArray(B);
+    //print2DArray(C); 
 
     return 0;
 }

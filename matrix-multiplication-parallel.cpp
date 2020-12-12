@@ -1,21 +1,10 @@
 
-//Main for "matrix-multiplication-parallel" C application
+//Main for "matrix-multiplication-parallel" C++ application
 //Created by r4m0nl1m4 16/11/2020
 
-//library(ies)
-#include <ctime>
-#include <iostream>
-#include <mpi.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <vector>
-
-//new library(ies)
 #include "./matrix.h"
+#include <mpi.h>
 #include "./report.h"
-
-using namespace std;
-using line = vector<long unsigned int>;
 
 MPI_Status status;
 

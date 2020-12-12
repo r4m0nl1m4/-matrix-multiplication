@@ -13,6 +13,7 @@
 //        matrix-multiplication-serial.cpp                                 //
 //        matrix-multiplication-serialRand.cpp                             //
 //        matrix-multiplication-parallel.cpp                               //
+//        matrix-multiplication-parallel-pthreads.cpp                      //
 //        calculates-serie-parallel-analysis.cpp                           //
 //        shellscript_start.sh                                             //
 //        README.txt                                                       //
